@@ -54,7 +54,8 @@
 			[
 				0,
 				1,
-				4
+				4,
+				6
 			]
 		}
 	],
@@ -93,7 +94,8 @@
 			[
 				0,
 				1,
-				4
+				4,
+				6
 			]
 		},
 		{
@@ -102,7 +104,8 @@
 			[
 				2,
 				3,
-				5
+				5,
+				7
 			]
 		}
 	],
@@ -139,6 +142,17 @@
 		{
 			"backtrace" : 1,
 			"path" : "C2B.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "BWT_easy_vers.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "BWT_easy_vers.h",
 			"sourceGroupIndex" : 1
 		}
 	],

@@ -2,19 +2,7 @@
 // Created by PC on 2023/3/4.
 #include "general_heading.h"
 
-char extract_char(uint64_t* addr, int idx){
-    int i = idx / 32;
-    int j = idx % 32;
-    uint64_t code = addr[i];
-    code = (code << j * 2) >> 62;//get the bits we want: shift left j*2 bits, then shift right 62 bits
-    switch (code) {
-        case(0) : return 'A';
-        case(1) : return 'C';
-        case(2) : return 'G';
-        case(3) : return 'T';
-        default: return 'N';
-    }
-}
+
 
 uint64_t extract_val(uint64_t* addr, int idx){
     int i = idx >> 5 ;
@@ -26,7 +14,6 @@ uint64_t extract_val(uint64_t* addr, int idx){
     code2 = code2 >> (64 - j * 2);
     uint64_t res = code1 | code2;
     return res;
-
 }
 
 int compare(uint64_t* addr, int i, int j){

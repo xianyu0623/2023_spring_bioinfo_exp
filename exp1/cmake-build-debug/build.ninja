@@ -67,6 +67,12 @@ build CMakeFiles/exp1.dir/C2B.cpp.obj: CXX_COMPILER__exp1_Debug D$:/bioinfo/exp1
   OBJECT_DIR = CMakeFiles\exp1.dir
   OBJECT_FILE_DIR = CMakeFiles\exp1.dir
 
+build CMakeFiles/exp1.dir/BWT_easy_vers.cpp.obj: CXX_COMPILER__exp1_Debug D$:/bioinfo/exp1/BWT_easy_vers.cpp || cmake_object_order_depends_target_exp1
+  DEP_FILE = CMakeFiles\exp1.dir\BWT_easy_vers.cpp.obj.d
+  FLAGS = -g
+  OBJECT_DIR = CMakeFiles\exp1.dir
+  OBJECT_FILE_DIR = CMakeFiles\exp1.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target exp1
@@ -75,7 +81,7 @@ build CMakeFiles/exp1.dir/C2B.cpp.obj: CXX_COMPILER__exp1_Debug D$:/bioinfo/exp1
 #############################################
 # Link the executable exp1.exe
 
-build exp1.exe: CXX_EXECUTABLE_LINKER__exp1_Debug CMakeFiles/exp1.dir/main.cpp.obj CMakeFiles/exp1.dir/sort.cpp.obj CMakeFiles/exp1.dir/C2B.cpp.obj
+build exp1.exe: CXX_EXECUTABLE_LINKER__exp1_Debug CMakeFiles/exp1.dir/main.cpp.obj CMakeFiles/exp1.dir/sort.cpp.obj CMakeFiles/exp1.dir/C2B.cpp.obj CMakeFiles/exp1.dir/BWT_easy_vers.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\exp1.dir
