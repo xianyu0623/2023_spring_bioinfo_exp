@@ -7,7 +7,7 @@ void printBinary(uint64_t n);
 int main() {
     std::vector<uint8_t> sequences;
     //open a file
-    std::string file = "D:\\bioinfo\\exp1\\NC_008253.fna";
+    std::string file = "../NC_008253.fna";
     std::ifstream myfile;
     myfile.open(file);
     std::string  cur_row;
@@ -30,15 +30,18 @@ int main() {
     double totaltime;
     start = clock();
     my_quicksort(SA, 0, size, sequence);
+    uint64_t* BWT = (uint64_t *)malloc(sizeof(uint64_t) * num_of_u64 + 1);
+    uint64_t loc = C2B_BWT(sequence, BWT, SA, size);
+    std::cout << "loc of dollar: " << loc << std::endl;
     finish = clock();
     totaltime = (double)(finish - start) / CLOCKS_PER_SEC;
     std::cout<<"time: "<<totaltime<<"s"<<std::endl;
     std::cout<<"size: "<<size<<std::endl;
-    //打印前10个SA数组的值
-    for(int i = 0 ; i < 10 ; i ++){
-        std::cout << SA[i] << std::endl;
-    }
-    print_BWT(SA, sequence, 1000);
+//    //打印前10个SA数组的值
+//    for(int i = 0 ; i < 10 ; i ++){
+//        std::cout << SA[i] << std::endl;
+//    }
+//    print_BWT(SA, sequence, 1000);
     return 0;
 }
 //this function is used to print the binary code, just for debug
